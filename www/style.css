@@ -61,49 +61,129 @@ a:hover{
 
 .navigation_bar{
     font-size:1.3em;
-    ul {
+}
+
+.navigation_bar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: url("Banner.png")
+    background-image: url("Banner.png");
     /* background-color: #333; */
-  }
-  
-  li {
+}
+
+.navigation_bar li {
     float: left;
-  }
-  
-  li a {
+}
+
+.navigation_bar li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  li a:hover {
+}
+
+.navigation_bar li a:hover {
     background-color: #111;
-  }
-  </style>}
+}
 
-  * {
+* {
     box-sizing: border-box;
-  }
+}
 
-  .column {
+.column {
     float: left;
     padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
-  }
-  
-  .left {
+    min-height: 300px;
+}
+
+.left {
     width: 75%;
-  }
-  
-  .right {
+}
+
+.right {
     width: 25%;
-  }
+}
+
+.right img {
+    width: 20vw;
+}
+
+.contact {
+    margin-top: 3cm;
+}
+
+/* Narrow screens (phones) */
+@media (max-width: 700px) {
+    body {
+        margin: 0;
+        font-size: 1.05em;
+    }
+
+    .banner {
+        padding: 4px 12px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h1, h2, h3 {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    p {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    ul, ol {
+        margin-left: 0;
+        margin-right: 12px;
+        padding-left: 32px;
+    }
+
+    .navigation_bar {
+        font-size: 1em;
+    }
+
+    .navigation_bar ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navigation_bar li a {
+        padding: 10px 8px;
+    }
+
+    /* Photo above the text, centred */
+    .row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .column {
+        width: 100%;
+        min-height: 0;
+        padding: 0;
+    }
+
+    .right {
+        text-align: center;
+        padding-top: 16px;
+    }
+
+    .right img {
+        width: 50%;
+        max-width: 220px;
+    }
+
+    .contact {
+        margin-top: 1.5em;
+    }
+}
 
 /* Clear floats after the columns */
 .row:after {
